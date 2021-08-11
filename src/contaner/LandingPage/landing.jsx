@@ -4,7 +4,7 @@ import Header from "../../component/Header/header";
 
 const LandingPage = () => {
     return (
-        <Grid container>
+        <Grid container direction='column'>
             <Grid item>
                 <Header />
             </Grid>

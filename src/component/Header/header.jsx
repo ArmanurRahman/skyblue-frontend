@@ -15,7 +15,7 @@ import CategoriesPanel from "../Category/category";
 
 const useStyles = makeStyles((theme) => ({
     container: {
-        width: "100vw",
+        width: "100%",
         backgroundColor: "white",
     },
     serachBox: {
@@ -38,14 +38,13 @@ const useStyles = makeStyles((theme) => ({
 const Header = () => {
     const classes = useStyles();
     return (
-        <Grid container component={Paper} spacing={2}>
-            <Grid item>
+        <Grid container component={Paper} direction='column'>
+            <Grid item className={classes.container}>
                 <Grid
                     container
                     direction='row'
                     alignItems='center'
                     justifyContent='space-between'
-                    className={classes.container}
                 >
                     <Grid item>
                         <Logo />
