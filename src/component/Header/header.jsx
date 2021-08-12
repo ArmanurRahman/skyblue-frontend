@@ -15,8 +15,12 @@ import CategoriesPanel from "../Category/category";
 
 const useStyles = makeStyles((theme) => ({
     container: {
+        marginTop: 20,
         width: "100%",
         backgroundColor: "white",
+        maxWidth: 1300,
+        marginLeft: "auto",
+        marginRight: "auto",
     },
     serachBox: {
         borderRadius: 25,
@@ -31,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     },
     searchContainer: {
         flexGrow: 1,
-        maxWidth: 500,
+        maxWidth: 700,
     },
 }));
 
