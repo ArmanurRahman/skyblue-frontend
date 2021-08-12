@@ -1,17 +1,13 @@
 import {
-    Button,
     List,
     ListItem,
     ListItemIcon,
     ListItemText,
     MenuItem,
-    Menu,
-    Collapse,
-    Paper,
     Box,
     Link,
 } from "@material-ui/core";
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
 import CategoryIcon from "@material-ui/icons/Category";
@@ -51,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
         left: 20,
         right: "auto",
         padding: "0.5rem 0px",
-        zIndex: 98,
+        zIndex: 198,
         position: "absolute",
         transform: "scaleY(0)",
         boxShadow: "rgb(43 52 69 / 10%) 0px 4px 16px",
@@ -91,11 +87,11 @@ const useStyles = makeStyles((theme) => ({
     subOptionPanel: {
         top: 0,
         width: 600,
-
+        zIndex: 198,
         position: "absolute",
         left: "100%",
         right: "auto",
-
+        backgroundColor: "white",
         display: "none",
     },
     subOptionSmallPanel: {
@@ -105,6 +101,7 @@ const useStyles = makeStyles((theme) => ({
         left: "100%",
         right: "auto",
         display: "none",
+        backgroundColor: "white",
     },
     subOptionPanel__inner: {
         boxShadow: "rgb(43 52 69 / 10%) 0px 4px 16px",
@@ -133,6 +130,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "space-between",
         width: "100%",
+        zIndex: 1000,
     },
     subContainer: {
         width: 180,
