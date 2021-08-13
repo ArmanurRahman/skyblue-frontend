@@ -4,6 +4,7 @@ import Header from "../../component/Header/header";
 import Carousel from "../../component/Carousel/carousel";
 
 import { makeStyles } from "@material-ui/core/styles";
+import MainCard from "../../component/Cards/main-card";
 
 const useStyles = makeStyles((theme) => ({
     carousel: {
@@ -26,6 +27,9 @@ const LandingPage = () => {
                 <Box className={classes.carousel}>
                     <Carousel />
                 </Box>
+            </Grid>
+            <Grid item>
+                <MainCard />
             </Grid>
         </Grid>
     );
