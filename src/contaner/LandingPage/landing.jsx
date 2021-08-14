@@ -4,7 +4,66 @@ import Header from "../../component/Header/header";
 import Carousel from "../../component/Carousel/carousel";
 
 import { makeStyles } from "@material-ui/core/styles";
-import MainCard from "../../component/Cards/main-card";
+import MainCardHolder from "../../component/MainCartHolder/MainCardHolder";
+
+const data = [
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+    {
+        productName: "Macbook Pro",
+        price: 1000,
+        rating: 4,
+        isWished: true,
+        url: "/img/macbook_pro.png",
+    },
+];
 
 const useStyles = makeStyles((theme) => ({
     carousel: {
@@ -13,6 +72,11 @@ const useStyles = makeStyles((theme) => ({
         marginTop: 20,
         backgroundColor: "white",
         boxShadow: "rgb(43 52 69 / 10%) 0px 4px 16px",
+    },
+    body: {
+        maxWidth: 1300,
+        margin: "auto",
+        marginTop: "2rem",
     },
 }));
 
@@ -29,7 +93,9 @@ const LandingPage = () => {
                 </Box>
             </Grid>
             <Grid item>
-                <MainCard />
+                <Grid container item className={classes.body}>
+                    <MainCardHolder data={data} />
+                </Grid>
             </Grid>
         </Grid>
     );

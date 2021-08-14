@@ -48,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const MainCard = () => {
+const MainCard = ({ item }) => {
     const classes = useStyles();
     return (
         <Box component={Paper} elevation={2} className={classes.container}>
@@ -57,7 +57,7 @@ const MainCard = () => {
                     id='image__container_action'
                     className={classes.image__container_action}
                 >
-                    <IconButton>
+                    <IconButton color={item.isWished ? "secondary" : "inherit"}>
                         <FavoriteIcon />
                     </IconButton>
                     <IconButton>
@@ -67,7 +67,7 @@ const MainCard = () => {
                 <Box className={classes.image}>
                     <Box>
                         <img
-                            src={`${process.env.PUBLIC_URL}/img/macbook_pro.png`}
+                            src={`${process.env.PUBLIC_URL + item.url}`}
                             height='auto'
                             width='100%'
                         />
@@ -75,8 +75,12 @@ const MainCard = () => {
                 </Box>
             </Box>
             <Box className={classes.description_container}>
-                <Typography>Product Name</Typography>
-                <Rating name='product-rating' value={3} onClick={() => {}} />
+                <Typography>{item.productName}</Typography>
+                <Rating
+                    name='product-rating'
+                    value={item.rating}
+                    onClick={() => {}}
+                />
                 <Box
                     style={{
                         display: "flex",
@@ -84,7 +88,7 @@ const MainCard = () => {
                         alignItems: "center",
                     }}
                 >
-                    <Typography>$200</Typography>
+                    <Typography>${item.price}</Typography>
                     <IconButton color='secondary'>
                         <AddBoxIcon />
                     </IconButton>
