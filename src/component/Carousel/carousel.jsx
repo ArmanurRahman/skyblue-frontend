@@ -91,23 +91,15 @@ const CarouselHome = () => {
             productId: "",
         },
     ]);
-    var items = [
-        {
-            name: "Random Name #1",
-            description: "Probably the most random thing you have ever seen!",
-        },
-        {
-            name: "Random Name #2",
-            description: "Hello World!",
-        },
-    ];
 
     return (
-        <Carousel>
-            {carouselData.map((item, i) => (
-                <Item key={i} item={item} />
-            ))}
-        </Carousel>
+        <div>
+            <Carousel>
+                {carouselData.map((item, i) => (
+                    <Item key={i} item={item} />
+                ))}
+            </Carousel>
+        </div>
     );
     /*
     return (
