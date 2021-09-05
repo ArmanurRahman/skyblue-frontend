@@ -12,6 +12,7 @@ const useStyles = makeStyles((theme) => ({
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
+        maxWidth: 1330,
     },
     img: {
         width: "50%",
@@ -101,26 +102,6 @@ const CarouselHome = () => {
             </Carousel>
         </div>
     );
-    /*
-    return (
-        <Slide>
-            {carouselData.map((item) => (
-                <div key={item.description}>
-                    <img
-                        className='d-block w-100'
-                        src={`${process.env.PUBLIC_URL}/img/macbook_pro.jpeg`}
-                        alt='First slide'
-                    />
-
-                    <h3>First slide label</h3>
-                    <p>
-                        Nulla vitae elit libero, a pharetra augue mollis
-                        interdum.
-                    </p>
-                </div>
-            ))}
-        </Slide>
-    );*/
 };
 
 export default CarouselHome;
