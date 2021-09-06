@@ -65,7 +65,7 @@ const Carousel = ({ data }) => {
             setCurrentPosition((prevState) => prevState - 1);
         }
     }
-    console.log(currentPosition);
+
     return (
         <div id='container' ref={myRef}>
             <div id='slider-container'>
