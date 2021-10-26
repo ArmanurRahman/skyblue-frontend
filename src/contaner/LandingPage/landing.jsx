@@ -8,6 +8,7 @@ import MainCardHolder from "../../component/MainCartHolder/MainCardHolder";
 import FireIcon from "../../assets/img/fire-icon.png";
 import ViewAllButton from "../../component/UI/Button/GrayButton";
 import CarosuelHeader from "../../component/UI/Paragraph/CarouselHeader";
+import "./landing.css";
 
 const data = [
     {
@@ -86,17 +87,15 @@ const useStyles = makeStyles((theme) => ({
 const LandingPage = () => {
     const classes = useStyles();
     return (
-        <Grid container direction='column'>
-            <Grid item>
-                <Header />
-            </Grid>
-            <Grid item>
-                <Box className={classes.carousel}>
+        <div className='flex flex-col'>
+            <Header />
+            <div>
+                <div className={classes.carousel}>
                     <Carousel />
-                </Box>
-            </Grid>
-            <Grid item>
-                <Grid container item className={classes.body}>
+                </div>
+            </div>
+            <div>
+                <div className={classes.body}>
                     {/**hot deal options */}
                     <div className='w-full flex justify-between mb-2'>
                         <div className='flex items-center'>
@@ -107,9 +106,9 @@ const LandingPage = () => {
                         <ViewAllButton />
                     </div>
                     <MainCardHolder data={data} />
-                </Grid>
-            </Grid>
-        </Grid>
+                </div>
+            </div>
+        </div>
     );
 };
 

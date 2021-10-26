@@ -18,7 +18,10 @@ module.exports = {
         },
     },
     variants: {
-        extend: {},
+        extend: {
+            maxHeight: ["focus"],
+            borderWidth: ["focus"],
+        },
     },
     plugins: [
         function ({ addComponents }) {
